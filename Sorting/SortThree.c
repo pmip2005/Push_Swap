@@ -1,12 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   SortThree.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ppoco <marvin.42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026-11-17 17:04:03 by ppoco             #+#    #+#             */
+/*   Updated: 2026-11-17 17:04:03 by ppoco            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Sorting.h"
 
 /* Sort exactly three distinct values, smallest at the top. */
 void	sort_three(t_stack *a)
 {
-	/* If the stack is already sorted, return without printing. */
-	/* Find which of the three positions contains the largest value. */
-	/* If needed, use one rotation to put that node at the bottom. */
-	/* Compare the top two values AFTER the rotation. */
-	/* Swap them if they are out of order. */
-	/* Use the op_ functions so every move is printed. */
+	t_node	*largest;
+	t_node	*i;
+
+	if (stack_is_sorted(a))
+		return ;
+	/* Find the largest node without changing the stack. */
+	largest = a->top;
+	i = a->top;
+	while (i)
+	{
+		if (i->value > largest->value)
+			largest = i;
+		i = i->below;
+	}
+	if (largest == a->top)
+		op_ra(a);
+	else if (largest != a->bottom)
+		op_rra(a);
+	if (a->top->value > a->top->below->value)
+		op_sa(a);
 }
