@@ -1,5 +1,17 @@
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   PushSwap.h                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ppoco <marvin.42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026-11-19 00:49:28 by ppoco             #+#    #+#             */
+/*   Updated: 2026-11-19 00:49:28 by ppoco            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef PUSHSWAP_H
+# define PUSHSWAP_H
 
 # include "Parsing/Parsing.h"
 # include "Sorting/Sorting.h"
