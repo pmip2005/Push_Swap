@@ -20,7 +20,6 @@ void	sort_three(t_stack *a)
 
 	if (stack_is_sorted(a))
 		return ;
-	/* Find the largest node without changing the stack. */
 	largest = a->top;
 	i = a->top;
 	while (i)
