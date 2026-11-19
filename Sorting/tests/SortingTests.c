@@ -1,5 +1,5 @@
 /* Test driver: stdout contains only the sorting instructions. */
-#include "Sorting.h"
+#include "../Sorting.h"
 #include <assert.h>
 #include <errno.h>
 #include <limits.h>

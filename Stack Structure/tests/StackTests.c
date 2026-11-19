@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "StackStruct.h"
+#include "../StackStruct.h"
 #include <assert.h>
 #include <limits.h>
 #include <stdio.h>

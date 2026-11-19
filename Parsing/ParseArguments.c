@@ -17,11 +17,14 @@
 /* No arguments is a successful empty input; do not print here. */
 int	parse_arguments(t_stack *a, int argc, char **argv)
 {
-	/* Declare an argument index. */
-	/* Start at 1: argv[0] is the program name. */
-	/* While the index is less than argc: */
-	/* Pass argv[index] to append_argument. */
-	/* If it fails, clear the entire stack and return 0. */
-	/* Otherwise, advance to the next argument. */
-	/* Once every argument succeeds, return 1. */
+	int	i;
+
+	i = 1;
+	while (i < argc)
+	{
+		if (!append_argument(a, argv[i]))
+			return (stack_clear(a), 0);
+		i++;
+	}
+	return (1);
 }
