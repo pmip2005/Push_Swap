@@ -37,4 +37,3 @@ int	main(int argc, char **argv)
 	}
 	return (stack_clear(&a), stack_clear(&b), 0);
 }
-
