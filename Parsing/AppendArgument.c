@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   AppendArgument.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ppoco <marvin.42.fr>                       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026-11-18 23:57:45 by ppoco             #+#    #+#             */
+/*   Updated: 2026-11-18 23:57:45 by ppoco            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Parsing.h"
 
 /* Split one argument on whitespace and append each token in order. */
@@ -5,16 +17,20 @@
 /* On failure, earlier tokens may already be in A; the caller clears A. */
 int	append_argument(t_stack *a, const char *argument)
 {
-	/* Declare scan indices, a token pointer and a token count. */
-	/* Starting at index zero, repeat until the argument ends: */
-	/* Skip whitespace: a space or a character from 9 through 13. */
-	/* If the argument ended after skipping whitespace, stop. */
-	/* Save the token start, then scan until whitespace or the end. */
-	/* Allocate token length + 1 bytes; return 0 if allocation fails. */
-	/* Copy the token and add its terminating null byte. */
-	/* Pass the token to append_token. */
-	/* Free the temporary token on BOTH success and failure. */
-	/* If append_token failed, return 0; otherwise count the token. */
-	/* After the loop, return 1 only if at least one token was added. */
-	/* Do not modify argument or print errors here. */
+	char	**token_stream;
+	int		i;
+
+	token_stream = split_whitespace(argument);
+	if (!token_stream)
+		return (0);
+	if (token_stream[0] == NULL)
+		return (free_tokens(token_stream), 0);
+	i = 0;
+	while (token_stream[i])
+	{
+		if (!append_token(a, token_stream[i]))
+			return (free_tokens(token_stream), 0);
+		i++;
+	}
+	return (free_tokens(token_stream), 1);
 }

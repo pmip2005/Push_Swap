@@ -34,6 +34,34 @@ static void	invalid(const char *text)
 	assert(value == 123);
 }
 
+static void	test_split(void)
+{
+	char	**tokens;
+	char	*part;
+
+	tokens = ft_split(",one,,two,", ',');
+	assert(tokens && tokens[0] && tokens[1] && !tokens[2]);
+	assert(!strcmp(tokens[0], "one") && !strcmp(tokens[1], "two"));
+	free_tokens(tokens);
+	tokens = split_whitespace(" \t3\n-2\r+1\v\f ");
+	assert(tokens && tokens[0] && tokens[1] && tokens[2] && !tokens[3]);
+	assert(!strcmp(tokens[0], "3") && !strcmp(tokens[1], "-2"));
+	assert(!strcmp(tokens[2], "+1"));
+	free_tokens(tokens);
+	tokens = split_whitespace(" \t\n");
+	assert(tokens && !tokens[0]);
+	free_tokens(tokens);
+	tokens = ft_split("", ' ');
+	assert(tokens && !tokens[0]);
+	free_tokens(tokens);
+	assert(!ft_split(NULL, ' ') && !split_whitespace(NULL));
+	free_tokens(NULL);
+	part = ft_substr("abc", 100, 5);
+	assert(part && !*part);
+	free(part);
+	puts("[PASS] Imported split, whitespace normalization and token cleanup");
+}
+
 int	main(void)
 {
 	const char	*bad[] = {"", "+", "-", " 12", "12 ", "\t12", "12\n",
@@ -66,6 +94,7 @@ int	main(void)
 	large[9999] = '7';
 	valid(large, 7);
 	puts("[PASS] 10,000-digit input without overflow or truncation");
+	test_split();
 	puts("All parsing tests passed.");
 	return (0);
 }
