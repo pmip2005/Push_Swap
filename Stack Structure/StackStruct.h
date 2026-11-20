@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   StackStruct.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ppoco <marvin.42.fr>                       +#+  +:+       +#+        */
+/*   By: ppoco <ppoco@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-14 16:02:35 by ppoco             #+#    #+#             */
 /*   Updated: 2026-11-14 16:02:35 by ppoco            ###   ########.fr       */
@@ -19,6 +19,7 @@
 typedef struct s_node
 {
 	int				value;
+	int				index;
 	struct s_node	*above;
 	struct s_node	*below;
 }	t_node;

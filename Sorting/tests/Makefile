@@ -1,3 +1,15 @@
+#  **************************************************************************  #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ppoco <ppoco@student.42lisboa.com>         +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/11/20 00:54:14 by ppoco             #+#    #+#              #
+#    Updated: 2026/11/20 00:54:14 by ppoco            ###   ########.fr        #
+#                                                                              #
+#  **************************************************************************  #
+
 NAME := sorting_tests
 CC := cc
 PYTHON := python3
@@ -5,6 +17,7 @@ CFLAGS := -Wall -Wextra -Werror -g -fsanitize=address,undefined
 
 STACK := ../../Stack\ Structure
 SRCS := SortingTests.c ../SortThree.c ../SortFive.c ../BringToTop.c \
+	../ChunkFindTarget.c \
 	../../Operations/Swap.c ../../Operations/Push.c \
 	../../Operations/Rotate.c ../../Operations/ReverseRotate.c \
 	$(STACK)/StackBehaviours.c $(STACK)/StackBehaviours2.c \

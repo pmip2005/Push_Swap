@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   NodeBehaviours.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ppoco <marvin.42.fr>                       +#+  +:+       +#+        */
+/*   By: ppoco <ppoco@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-14 16:14:20 by ppoco             #+#    #+#             */
 /*   Updated: 2026-11-14 16:14:20 by ppoco            ###   ########.fr       */
@@ -21,5 +21,6 @@ t_node	*node_new(int value)
 	node->below = NULL;
 	node->above = NULL;
 	node->value = value;
+	node->index = -1;
 	return (node);
 }

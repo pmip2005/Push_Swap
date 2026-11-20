@@ -1,3 +1,15 @@
+#  **************************************************************************  #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: ppoco <ppoco@student.42lisboa.com>         +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2026/11/20 00:54:14 by ppoco             #+#    #+#              #
+#    Updated: 2026/11/20 00:54:14 by ppoco            ###   ########.fr        #
+#                                                                              #
+#  **************************************************************************  #
+
 NAME := push_swap
 CC := cc
 CFLAGS := -Wall -Wextra -Werror
@@ -21,7 +33,13 @@ OPERATION_SRCS := \
 SORTING_SRCS := \
 	SortThree.c \
 	SortFive.c \
-	BringToTop.c
+	BringToTop.c \
+	ChunkAssignIndices.c \
+	ChunkFindTarget.c \
+	ChunkPush.c \
+	ChunkPullMax.c \
+	ChunkSort.c \
+	RadixSort.c
 
 PARSING_SRCS := \
 	ParseInt.c \
@@ -53,7 +71,7 @@ HEADERS := \
 	Stack\ Structure/StackStruct.h
 
 # These are commands, not names of files that Make should look for.
-.PHONY: all test clean fclean re
+.PHONY: all test test-sanitize clean fclean re
 
 all: $(NAME)
 
@@ -89,12 +107,20 @@ test: $(NAME)
 	$(MAKE) -C Sorting/tests test
 	python3 tests/test_cli.py
 
+# Test the complete program with memory and undefined-behavior checks.
+test-sanitize:
+	$(MAKE) NAME=tests/push_swap_sanitized BUILD=.build-sanitized \
+		CFLAGS="-Wall -Wextra -Werror -g -fsanitize=address,undefined" all
+	python3 tests/test_cli.py --binary tests/push_swap_sanitized
+
 # RM is Make's built-in removal command. Only generated files are removed.
 clean:
 	$(RM) $(OBJS)
+	$(RM) .build-sanitized/*.o
 
 fclean: clean
 	$(RM) $(NAME)
+	$(RM) tests/push_swap_sanitized
 
 re:
 	$(MAKE) fclean

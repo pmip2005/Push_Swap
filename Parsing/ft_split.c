@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ppoco <ppoco@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ppoco <ppoco@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/30 18:24:34 by ppoco             #+#    #+#             */
 /*   Updated: 2026/11/02 16:14:38 by ppoco            ###   ########.fr       */

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   Push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ppoco <marvin.42.fr>                       +#+  +:+       +#+        */
+/*   By: ppoco <ppoco@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-17 16:16:47 by ppoco             #+#    #+#             */
 /*   Updated: 2026-11-17 16:16:47 by ppoco            ###   ########.fr       */

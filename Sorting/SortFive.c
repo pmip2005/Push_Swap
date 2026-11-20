@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   SortFive.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ppoco <marvin.42.fr>                       +#+  +:+       +#+        */
+/*   By: ppoco <ppoco@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-18 21:54:28 by ppoco             #+#    #+#             */
 /*   Updated: 2026-11-18 21:54:28 by ppoco            ###   ########.fr       */
@@ -12,7 +12,8 @@
 
 #include "Sorting.h"
 
-/* Sort four or five distinct values in A; B must start empty. */
+/* Repeatedly move the smallest value to B until A has three values. */
+/* Sort the remaining three, then restore the values from B. */
 void	sort_five(t_stack *a, t_stack *b)
 {
 	t_node	*smallest;
@@ -30,7 +31,7 @@ void	sort_five(t_stack *a, t_stack *b)
 				smallest = i;
 			i = i->below;
 		}
-		bring_to_top(a, smallest);
+		bring_to_top(a, smallest, 'a');
 		op_pb(a, b);
 	}
 	sort_three(a);

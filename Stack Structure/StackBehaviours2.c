@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   StackBehaviours2.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ppoco <marvin.42.fr>                       +#+  +:+       +#+        */
+/*   By: ppoco <ppoco@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-15 21:03:56 by ppoco             #+#    #+#             */
 /*   Updated: 2026-11-15 21:03:56 by ppoco            ###   ########.fr       */

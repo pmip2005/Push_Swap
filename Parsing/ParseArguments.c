@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ParseArguments.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ppoco <marvin.42.fr>                       +#+  +:+       +#+        */
+/*   By: ppoco <ppoco@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-19 00:21:10 by ppoco             #+#    #+#             */
 /*   Updated: 2026-11-19 00:21:10 by ppoco            ###   ########.fr       */

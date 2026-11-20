@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   AppendArgument.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ppoco <marvin.42.fr>                       +#+  +:+       +#+        */
+/*   By: ppoco <ppoco@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-18 23:57:45 by ppoco             #+#    #+#             */
 /*   Updated: 2026-11-18 23:57:45 by ppoco            ###   ########.fr       */

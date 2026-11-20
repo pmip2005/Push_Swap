@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   PushSwap.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ppoco <marvin.42.fr>                       +#+  +:+       +#+        */
+/*   By: ppoco <ppoco@student.42lisboa.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026-11-19 00:49:28 by ppoco             #+#    #+#             */
 /*   Updated: 2026-11-19 00:49:28 by ppoco            ###   ########.fr       */
@@ -15,5 +15,13 @@
 
 # include "Parsing/Parsing.h"
 # include "Sorting/Sorting.h"
+
+typedef enum e_strategy
+{
+	ADAPTIVE,
+	SIMPLE,
+	MEDIUM,
+	COMPLEX
+}	t_strategy;
 
 #endif
